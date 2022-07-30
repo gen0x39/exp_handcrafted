@@ -6,7 +6,7 @@ from graphviz import Digraph
 
 def plot(genotype_name, genotype, filename):
   g = Digraph(
-      format='pdf',
+      format='eps',
       edge_attr=dict(fontsize='20', fontname="times"),
       node_attr=dict(style='filled', shape='rect', align='center', fontsize='20', height='0.5', width='0.5', penwidth='2', fontname="times"),
       engine='dot')
@@ -40,9 +40,10 @@ def plot(genotype_name, genotype, filename):
   for i in range(steps):
     g.edge(str(i), "cell_{k}", fillcolor="gray")
   
-  root = os.path.join("outputs", "visualize_cell")
+  root = os.path.join("../outputs", "visualize_cell")
   output_path = os.path.join(root, genotype_name)
-  g.render(os.path.join(output_path, filename), view=True)
+  print(os.path.exists(output_path))
+  g.render(os.path.join(output_path, filename), view=False)
   os.remove(os.path.join(output_path, filename))
 
 if __name__ == '__main__':
