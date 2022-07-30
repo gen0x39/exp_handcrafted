@@ -1,1 +1,0 @@
-python3 ../src/adv_train_darts_based.py --batch_size 64 --gpu 0 --epochs 200 --adv_loss pgd --arch CELL0
