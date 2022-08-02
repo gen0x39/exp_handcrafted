@@ -23,3 +23,9 @@ for ad in arch_dirs:
         pt_file_path = os.path.join(data_path, bf)
         if not os.path.exists(os.path.join(output_path, bf)):
             shutil.copy2(pt_file_path, output_path+'/')
+
+    log_files = [s for s in files_file if 'log.txt' in s]
+    for lf in log_files:
+        log_file_path = os.path.join(data_path, lf)
+        if not os.path.exists(os.path.join(output_path, lf)):
+            shutil.copy2(log_file_path, output_path+'/')
