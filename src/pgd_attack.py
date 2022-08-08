@@ -166,7 +166,6 @@ def main():
             print(f"{ad}: test-acc:{cln_acc} test-ae-acc:{adv_acc}")
             logging.info("%s: test-acc:%f test-ae-acc:%f", ad, cln_acc, adv_acc)
 
-            exit()
 
 if __name__ == '__main__':
     main()
