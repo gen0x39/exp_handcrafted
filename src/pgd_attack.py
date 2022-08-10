@@ -56,7 +56,7 @@ kwargs = {'num_workers': 4, 'pin_memory': True} if use_cuda else {}
 log_format = '%(asctime)s %(message)s'
 logging.basicConfig(stream=sys.stdout, level=logging.INFO,
     format=log_format, datefmt='%m/%d %I:%M:%S %p')
-fh = logging.FileHandler(os.path.join('../', 'best_params', 'log.txt'))
+fh = logging.FileHandler(os.path.join('../', 'best_params', 'test_acc.txt'))
 fh.setFormatter(logging.Formatter(log_format))
 logging.getLogger().addHandler(fh)
 
